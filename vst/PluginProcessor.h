@@ -4,7 +4,7 @@
 
 #define FFT_SIZE (1<<13)
 
-const std::complex<float> I = (0.0, 1.0);
+const std::complex<float> I(0.0, 1.0);
 
 #define PI M_PI
 

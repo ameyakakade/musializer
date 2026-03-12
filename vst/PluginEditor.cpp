@@ -10,7 +10,7 @@ AudioPluginAudioProcessorEditor::AudioPluginAudioProcessorEditor (AudioPluginAud
 {
     juce::ignoreUnused (processorRef);
     setSize (height, width);
-    startTimer(16);
+    startTimerHz(60);
 }
 
 AudioPluginAudioProcessorEditor::~AudioPluginAudioProcessorEditor()
