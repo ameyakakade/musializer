@@ -34,25 +34,7 @@ private:
     }
     )glsl" ;
 
-    juce::String fragmentSource =
-         R"glsl(#version 120
-        uniform sampler2D uDataTexture;
-        uniform vec2 uRes;
-        uniform float steps;
-
-        void main() {
-
-            vec2 uv = gl_FragCoord.xy / uRes;
-
-            float height = texture2D(uDataTexture, vec2(uv.x*0.5, 0.5)).r*2/3;
-
-            float no = uv.x*steps*0.5 - floor(uv.x*steps*0.5);
-
-            float isVisible = floor(height/uv.y);
-
-            gl_FragColor = vec4(no, isVisible, 0.0, 1.0);
-        }
-    )glsl" ;
+    juce::String fragmentSource;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (shaderC)
 };

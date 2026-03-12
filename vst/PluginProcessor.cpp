@@ -219,7 +219,7 @@ size_t AudioPluginAudioProcessor::fft_analyze(float dt)
     fft(in_win, out_raw, FFT_SIZE);
 
     // "Squash" into the Logarithmic Scale
-    float step = 1.09;
+    float step = 1.06;
     float lowf = 1.0f;
     size_t m = 0;
     float max_amp = 1.0f;
